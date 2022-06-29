@@ -1,0 +1,264 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --default-color: #cf8e00;
+  --default-text-color: #cbe1ff;
+  --white: #000000;
+  --black--first: #000000;
+  --black--second: #4d0000;
+  --main-black: #c4dcff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-tap-highlight-color: transparent; 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  -webkit-tap-highlight-color: hsla(0, 0, 0, 0); 
+  -webkit-tap-highlight-color: #00000000;
+  -webkit-tap-highlight-color: #0000;
+}
+
+body {
+  background: var(--default-color);
+}
+
+.App {
+  display: grid;
+  grid-auto-rows: 539px;
+  padding: 1rem 0rem;
+}
+
+body {
+  background-color: #e5e5e5;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 100%;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.container .calculator {
+  height: 90vh;
+  width: 330px;
+  background-color: var(--main-black);
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  border: unset;
+  box-shadow: unset;
+  color: var(--default-text-color);
+  cursor: pointer;
+}
+
+button.special,
+button.special.sign {
+  background-color: var(--default-color);
+}
+
+.c-wrappers {
+  display: grid;
+  grid-auto-rows: 10% 28% 11% 51%;
+  height: 100%;
+}
+
+.ctcs {
+  padding: 0.5rem 1rem;
+  
+}
+
+.c-type {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+.c-type button {
+  padding: 0.5rem;
+  background-color: var(--black--first);
+  font-size: 0.8rem;
+  font-weight: 400;
+  transition: all 0.5s linear;
+}
+
+.c-type button:active {
+  background-color: var(--default-text-color);
+}
+
+.c-type button.active {
+  background-color: var(--default-color);
+}
+
+.c-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  transition: all 0.5s linear;
+  overflow: hidden;
+  
+}
+
+.c-history-answers {
+  background-color: var(--black--first);
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--default-text-color);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.c-answers {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  color: var(--white);
+  font-weight: 900;
+}
+
+.c-computer {
+  background-color: var(--black--first);
+  padding: 0.4rem 1rem;
+  display: grid;
+  grid-template-columns: minmax(0px, 50px) repeat(2, 1fr);
+
+  font-size: 1.8rem;
+  font-weight: 300;
+  transition: all 0.5s linear;
+  overflow: hidden;
+}
+
+.c-computer span {
+  letter-spacing: 0.1rem;
+  color: var(--default-text-color);
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow-y: scroll;
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.c-computer > button {
+  background-color: unset;
+  font-size: 1.2rem;
+  color: var(--default-text-color);
+}
+
+.c-computer span::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+.c-grids {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.5rem 1rem;
+}
+
+.c-grids > button {
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.5s linear;
+  text-transform: uppercase;
+  background-color: var(--black--second);
+  border: 3px solid var(--main-black);
+}
+
+.c-grids > button:hover {
+  background-color: rgb(59, 59, 59) !important;
+
+}
+
+.c-grids > button.normal:hover {
+  background-color: rgba(255, 255, 255);
+}
+
+.c-grids > button.top-btn {
+  background-color: var(--black--first);
+  box-shadow: 0px 0px 4px 1px rgba(10, 10, 10, 0.75);
+}
+
+.c-grids > button.normal {
+  background: rgb(255,2,2);
+background: linear-gradient(0deg, rgb(105, 0, 0) 
+7%, rgb(100, 0, 0) 70%, rgba(255,152,152,1) 100%);
+
+}
+
+.normal {
+  box-shadow: 0px 0px 4px 1px rgba(10, 10, 10, 0.75);
+}
+
+.c-grids > button.special {
+  background-color: var(--default-color);
+  box-shadow: 0px 0px 4px 1px rgba(10, 10, 10, 0.75);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+
+@media screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: unset;
+    width: 750px;
+  }
+}
+
+.no-rv {
+  cursor: unset;
+}
+
+.jman {
+  font-size: 200px;
+}
+.c-type button.jman {
+  font-size: 25px ;
+  font-weight: 500;
+}
+
+.cover {
+  height: 90vh;
+  width: 330px;
+  background-color: var(--main-black);
+  border-radius: 0.5rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.fa-solid {
+  font-size: 11px;
+  color: red;
+}
